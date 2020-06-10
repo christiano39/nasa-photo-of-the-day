@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import { apiKey } from './APIKey'
 
 function App() {
+  const [data, setData] = useState()
+
+  useEffect(() => {
+    console.log(apiKey)
+  }, [])
+  
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      
     </div>
   );
 }
