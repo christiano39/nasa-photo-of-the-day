@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./reset.css"
 import "./general.css"
 import "./App.css";
-import { API_KEY } from './APIKey'
+import { API_KEY } from './apiKey'
 import axios from 'axios'
 import APODContainer from './Components/APODContainer'
 import DatePicker from './Components/DatePicker'
