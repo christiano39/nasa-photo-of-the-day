@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./reset.css"
 import "./general.css"
 import "./App.css";
-import { apiKey } from './APIKey'
+import { API_KEY } from './APIKey'
 import axios from 'axios'
 import APODContainer from './Components/APODContainer'
 import DatePicker from './Components/DatePicker'
@@ -27,7 +27,7 @@ function App() {
   useEffect(() => {
     const fetchData = () => {
       axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${date}`)
       .then(response => {
         setPOTD(response.data)
       })
