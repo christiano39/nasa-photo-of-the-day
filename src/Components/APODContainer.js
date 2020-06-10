@@ -13,7 +13,7 @@ export default function APODContainer(props) {
         return (
             <div className="apod-container">
                 <Header title={potd.title} author={potd.copyright}/>
-                <Content title={potd.title} author={potd.copyright} src={potd.url} type={potd.media_type}/>
+                <Content title={potd.title} src={potd.url} hdSrc={potd.hdurl} type={potd.media_type}/>
                 <Footer date={potd.date} description={potd.explanation}/>
             </div>
         )
