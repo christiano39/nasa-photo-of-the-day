@@ -9,10 +9,14 @@ import DatePicker from './Components/DatePicker'
 
 function App() {
   const getToday = () => {
+    const pad = (num, max) => {
+      num = num.toString()
+      return num.length < max ? pad('0' + num, max) : num
+    }
     const today = new Date()
     const year = today.getFullYear()
-    const month = today.getMonth() + 1
-    const day = today.getDate()
+    const month = pad(today.getMonth() + 1, 2)
+    const day = pad(today.getDate() - 1, 2)
     return `${year}-${month}-${day}`
   }
   
@@ -33,26 +37,12 @@ function App() {
     }
     fetchData()
   }, [date])
-
-  // useEffect(() => {
-  //   const fetchData = () => {
-  //     axios
-  //     .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${date}`)
-  //     .then(response => {
-  //       setPOTD(response.data)
-  //     })
-  //     .catch(err => {
-  //       console.log(`Error: ${err}`)
-  //     })
-  //   }
-  //   fetchData()
-  // }, [date])
   
   return (
     <div className="App">
       <h1 className="page-title">NASA Astronomical Photo of the Day</h1>
       <APODContainer potd={potd}/>
-      <DatePicker setDate={setDate} date={date}/>
+      <DatePicker setDate={setDate} date={date} today={getToday}/>
     </div>
   );
 }

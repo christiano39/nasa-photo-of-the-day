@@ -8,12 +8,12 @@ export default function APODContainer(props) {
     const { potd } = props
 
     if (!potd){
-        return <h2>Oops! Looks like there is no photo for this date :(</h2>
+        return <h2 className="no-photo">Oops! Looks like there is no photo for this date :(</h2>
     }else{
         return (
             <div className="apod-container">
                 <Header title={potd.title} author={potd.copyright}/>
-                <Content title={potd.title} author={potd.copyright} imgSrc={potd.url}/>
+                <Content title={potd.title} author={potd.copyright} src={potd.url} type={potd.media_type}/>
                 <Footer date={potd.date} description={potd.explanation}/>
             </div>
         )

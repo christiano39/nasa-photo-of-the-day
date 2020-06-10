@@ -1,11 +1,17 @@
 import React from 'react'
+import './Content.css'
 
 export default function Content(props) {
-    const { imgSrc, title, author } = props
+    const { src, title, author, type } = props
     
     return (
         <div className="content">
-            <img className='photo' src={imgSrc} alt={`${title}, taken by ${author}`}/>
+            {
+                type === 'image' && <img className='photo' src={src} alt={`${title}, taken by ${author}`}/>
+            }
+            {
+                type === 'video' && <iframe className='video' title={title} src={src} width='560' height='315' frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            }
         </div>
     )
 }
