@@ -2,13 +2,14 @@ import React, { useEffect } from 'react'
 import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
+import './APODContainer.css'
 
 export default function APODContainer(props) {
     const { potd } = props
 
-    useEffect(() => {
-        console.log(potd)
-    })
+    // useEffect(() => {
+    //     console.log(potd)
+    // })
 
     if (!potd){
         return <h2>Loading...</h2>

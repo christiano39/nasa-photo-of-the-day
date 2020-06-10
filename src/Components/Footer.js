@@ -5,8 +5,8 @@ export default function Footer(props) {
     
     return (
         <div className="footer">
-            <time>{date}</time>
-            <p>{description}</p>
+            <time className='date'>{date}</time>
+            <p className='description'>{description}</p>
         </div>
     )
 }

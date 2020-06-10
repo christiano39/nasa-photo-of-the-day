@@ -5,7 +5,7 @@ export default function Content(props) {
     
     return (
         <div className="content">
-            <img src={imgSrc} alt={`${title}, taken by ${author}`}/>
+            <img className='photo' src={imgSrc} alt={`${title}, taken by ${author}`}/>
         </div>
     )
 }

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import "./reset.css"
+import "./general.css"
 import "./App.css";
 import { apiKey } from './APIKey'
 import axios from 'axios'
@@ -23,7 +25,7 @@ function App() {
   
   return (
     <div className="App">
-      <h1>NASA Astronomical Photo of the Day</h1>
+      <h1 className="page-title">NASA Astronomical Photo of the Day</h1>
       <APODContainer potd={potd}/>
     </div>
   );
