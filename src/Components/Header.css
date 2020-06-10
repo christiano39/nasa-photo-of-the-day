@@ -1,6 +1,15 @@
 .header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+}
+
+.header .photo-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.header .credit {
+    font-style: italic;
 }
