@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./reset.css"
 import "./general.css"
 import "./App.css";
-import { API_KEY } from './apiKey'
+import { API_KEY } from './APIKey'
 import axios from 'axios'
 import APODContainer from './Components/APODContainer'
 import DatePicker from './Components/DatePicker'
+import HDCheckbox from "./Components/HDCheckbox";
 
 function App() {
   const getToday = () => {
@@ -22,7 +23,7 @@ function App() {
   
   const [potd, setPOTD] = useState(null)
   const [date, setDate] = useState(getToday())
-  
+  const [wantsHD, setWantsHD] = useState(false)
 
   useEffect(() => {
     const fetchData = () => {
@@ -41,8 +42,9 @@ function App() {
   return (
     <div className="App">
       <h1 className="page-title">NASA Astronomical Photo of the Day</h1>
-      <APODContainer potd={potd}/>
+      <APODContainer potd={potd} wantsHD={wantsHD}/>
       <DatePicker setDate={setDate} date={date} today={getToday}/>
+      <HDCheckbox setWantsHD={setWantsHD}/>
     </div>
   );
 }
