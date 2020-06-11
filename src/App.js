@@ -7,6 +7,7 @@ import axios from 'axios'
 import APODContainer from './Components/APODContainer'
 import DatePicker from './Components/DatePicker'
 import HDCheckbox from "./Components/HDCheckbox";
+import InnerContainer from './StyledComponents/InnerContainer'
 
 function App() {
   const getToday = () => {
@@ -43,8 +44,10 @@ function App() {
     <div className="App">
       <h1 className="page-title">NASA Astronomical Photo of the Day</h1>
       <APODContainer potd={potd} wantsHD={wantsHD}/>
-      <DatePicker setDate={setDate} date={date} today={getToday}/>
-      <HDCheckbox setWantsHD={setWantsHD}/>
+      <InnerContainer direction="column" align="center" margin="2rem 0">
+        <DatePicker setDate={setDate} date={date} today={getToday}/>
+        <HDCheckbox setWantsHD={setWantsHD}/>
+      </InnerContainer>
     </div>
   );
 }

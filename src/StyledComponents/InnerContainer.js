@@ -6,4 +6,5 @@ export default styled.div`
     flex-wrap: ${props => props.wrap ? props.wrap : 'no-wrap'};
     justify-content: ${props => props.justify ? props.justify : 'flex-start'};
     align-items: ${props => props.align ? props.align : 'flex-start'};
+    margin: ${props => props.margin ? props.margin : '0'};
 `
