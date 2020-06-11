@@ -1,5 +1,6 @@
 import React from 'react'
 import './DatePicker.css'
+import Label from '../StyledComponents/Label'
 
 export default function DatePicker(props){
     
@@ -12,7 +13,7 @@ export default function DatePicker(props){
     
     return (
         <div className='date-picker-container'>
-            <label htmlFor="date-picker">Choose date:</label>
+            <Label htmlFor="date-picker">Choose date:</Label>
             <input type="date" id="date-picker" name="date-picker"
                    value={date}
                    min="1995-06-16" max={today()}

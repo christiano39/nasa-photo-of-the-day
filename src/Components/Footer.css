@@ -5,12 +5,6 @@
     align-items: center;
 }
 
-.footer .date {
-    font-weight: bold;
-    font-style: italic; 
-    margin: 8px;
-}
-
 .footer .description {
     font-size: 1.6rem;
     margin: 0 15px 15px;
