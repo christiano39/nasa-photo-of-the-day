@@ -9,18 +9,18 @@ import DatePicker from './Components/DatePicker'
 
 function App() {
   const getToday = () => {
-    const pad = (num, max) => {
+    const pad = (num) => {
       num = num.toString()
-      return num.length < max ? pad('0' + num, max) : num
+      return num.length < 2 ? pad('0' + num) : num
     }
     const today = new Date()
     const year = today.getFullYear()
-    const month = pad(today.getMonth() + 1, 2)
-    const day = pad(today.getDate() - 1, 2)
+    const month = pad(today.getMonth() + 1)
+    const day = pad(today.getDate())
     return `${year}-${month}-${day}`
   }
   
-  const [potd, setPOTD] = useState()
+  const [potd, setPOTD] = useState(null)
   const [date, setDate] = useState(getToday())
   
 
