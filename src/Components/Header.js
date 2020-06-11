@@ -1,5 +1,4 @@
 import React from 'react'
-import './Header.css'
 import Title from '../StyledComponents/Title'
 import Credit from '../StyledComponents/Credit'
 import Author from '../StyledComponents/Author'
