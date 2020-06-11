@@ -32,7 +32,7 @@ function App() {
         setPOTD(response.data)
       })
       .catch(err => {
-        console.log(`Error: ${err}`)
+        setPOTD(null)
       })
     }
     fetchData()

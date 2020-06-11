@@ -3,12 +3,13 @@ import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
 import Container from '../StyledComponents/Container'
+import Error from '../StyledComponents/Error'
 
 export default function APODContainer(props) {
     const { potd } = props
 
     if (!potd){
-        return <h2 className="no-photo">Oops! Looks like there is no photo for this date :(</h2>
+        return <Error>Oops! Looks like there is no photo for this date :(</Error>
     }else{
         return (
             <Container>

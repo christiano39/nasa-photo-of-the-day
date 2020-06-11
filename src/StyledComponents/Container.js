@@ -4,7 +4,7 @@ export default styled.div`
     max-width: 1000px;
     width: 70%;
     margin: 0 auto;
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     border: 2px solid black;
     background-color: white;
     color: black;
